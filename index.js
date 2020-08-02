@@ -12,7 +12,7 @@ class App extends React.Component {
   }
 
   async componentDidMount() {
-    const stream = await navigator.mediaDevices.getUserMedia({video: true, audio: { echoCancellation: false }});
+    const stream = await navigator.mediaDevices.getUserMedia({video: true, audio: { echoCancellation: true }});
     this.video.srcObject = stream;
     this.video.play();
     this.mediaRecorder = new MediaRecorder(stream);
